@@ -23,3 +23,31 @@ The data was sourced from Kaggle: https://www.kaggle.com/datasets/pahuljotsingh/
 ## 📊 Analysis
 
 ### 1️⃣ How have home prices evolved over time, and how are they affected by mortgage and interest rates?
+
+### 🔧 Excel Skills Used: Power Query (ETL), PivotTable & PivotChart & Timeline Visualizations
+
+#### 🧲 Power Query (ETL)
+
+##### 🧲 Extract
+I first extracted the original kaggle dataset using Power Query. 
+
+##### 🔄 Transform
+Then I performed column profiling to detect irregularities. 
+
+After I performed transformations, this included:
+- Removed unnecessary columns
+- Changed the name of Median_Income to Median_Individual Income
+- Changed numbers to percentages and divided by 100.
+- Multiplied US population by 1000 (truncated in original CSV).
+
+##### 📥 Load
+Then I loaded the data into Excel.
+
+#### 🧲 PivotTable, PivotChart, & Timeline Visualizations
+
+##### 📈 PivotTable and Pivot Chart
+After loading my data I created a PivotTable and PivotChart with data comparing the the Case-Shiller Home Price Index with interest rates and mortgage rates. 
+I also added a Timeline so users can filter based on key periods.
+
+
+#### 📊 Analysis
