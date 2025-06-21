@@ -60,10 +60,10 @@ increased 100%/doubled in price. <br/> <br/>
 After Looking at the chart we can see a consistent trend of home prices going up. Interests Rates have fluctuated up and down as well as mortgage rates. <br/><br/>
 However, during 2021 and 2023 we saw a signficant increase in interest and mortgage rates as well as home prices. <br/>
 
-<img src="/Resources/Question%201%20Resources/7.%20Q1%20Dashboard.png" alt="7. Q1 Dashboard" width="500" height="500"/>
+<img src="/Resources/Question%201%20Resources/7.%20Q1%20Dashboard.png" alt="7. Q1 Dashboard" width="400" height="300"/>
 
 #### Conclusion
-This can mean that home price increases may be due to other causes besides interest and mortgage rates as they consistenly increase.<br/>
+This can mean that HPI increases may be due to causes other than interest and mortgage rates as HPI consistenly increase regardless.<br/>
 However, they may increase more when interest rates increase more dramatically . <br/>
 
 ### 2️⃣  Which economic indicators appear most strongly connected to home price changes?
@@ -71,7 +71,11 @@ However, they may increase more when interest rates increase more dramatically .
 
 I used functions to calculate the correlation between Interest Rate, Mortgage Rate, Unemployment Rate, Inflation (CPI), Consumer Sentiment Index and Home Price Index.
 
-To use calculate the correlations I used 
+Consumer Sentiment Index - is the outlook of consumers on the economy and their financial situation. 100 being neutral, > 100 optimisitic, < 100 pessimistic.
+
+Inflation (CPI) - is the Consumer Price Index or the price change for a basket of goods compared to a base year (i.e. 1982-1984). 100 is base (1984). 200 means prices doubled since 1984.
+
+To calculate the correlations I used 
 ```
 =CORREL(us_home_prices_dataset_2004_2024[Home_Price_Index],
 us_home_prices_dataset_2004_2024[Consumer_Sentiment])
@@ -79,20 +83,18 @@ us_home_prices_dataset_2004_2024[Consumer_Sentiment])
 
 And similarly for the other metrics.
 
-I used conditional formatting for the font color. <br/>
-Strong positive correlations used a green color, strong negative used red, other used black.
+I used color scale conditional formatting for the background color. <br/>
+Strong positive correlations used a green color, strong negative used red, neutral used white.
 
-<img src="/Resources/Question%202%20Resources/Conditional%20Formatting.png" alt="Conditional Formatting" width="450" height="150"/>
+<img src="/Resources/Question 2 Resources/Color Scale.png" alt="Color Scale" width="450" height="150"/>
 
 #### 📊 Analysis
+I created a formatted correlations table and it showed a strong positive correlation between HPI and Inflation (CPI). <br/>
+There is also a weak negative correlation between HPI and unemployment.
 
-Consumer Sentiment Index - is the outlook of consumers on the economy and their financial situation. 100 being neutral, > 100 optimisitic, < 100 pessimistic.
+<img src="/Resources/Question 2 Resources/Correlations Formatted.png" alt="Correlations Formatted" width="450" height="250"/>
 
-Inflation (CPI) - is the Consumer Price Index or the price change for a basket of goods compared to a base year (i.e. 1982-1984).
-
-
-### 🔧 Excel Skills Used: Conditional Formatting
-
-I used conditional formatting based on the correlation of HPI and the rates.
-Upon inspection of the correlation of HPI and interest and mortgage rates we can see that there is a weak correlation, 0.42 and 0.19 respectively from 2004-2024. <br/>
-However, during 2021 and 2023 we saw a signficant increase in interest and mortgage rates as well as home prices. The correlation here is 0.74 and 0.87 respectively <br/>
+#### Conclusion
+It seems that inflation may be a strong reason housing prices are increasing. <br/>
+We may also assume that Housing Prices may increase when there are more people working. <br/>
+This may be due to there being more money in the market to buy a home <br/>
