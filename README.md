@@ -82,7 +82,9 @@ And similarly for the other metrics.
 I used conditional formatting for the font color. <br/>
 Positive correlations used a green color, negative used red, neutral used black.
 
-<img src="/Resources/Question%202%20Resources/Conditional%20Formatting.png" alt="Conditional Formatting" width="400" height="200"/>
+
+
+
 
 #### 📊 Analysis
 
