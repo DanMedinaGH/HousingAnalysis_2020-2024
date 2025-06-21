@@ -5,11 +5,10 @@ As a Data Analyst for a residential REIT (Real Estate Investment Trust) company 
 
 ### ❓ Questions to Analyze
 In order to support analysis I asked the following questions: 
-1. How have home prices evolved over time and are they affected by mortgage and interest rates?
-- Interest and mortgage rates are the two metrics cloesly associated with homes. 
-2. What other economic indicators are most strongly connected to home price changes?
-3. Do changes in housing construction (permits and starts) impact price trends?
-4. Have major economic disruptions—like the 2008 crash and COVID-19—affected housing prices and related indicators?
+1. How have home prices evolved over time and are they affected by interest and mortgage rates, inflation, and unemployment?
+2. What are the correlations of HPI to these metrics?
+3. Have major economic or political events like the 2008 crash and COVID-19—affected HPI and inflation?
+4. How has HPI changed since 2004?
 5. What actionable insights can we take from this analysis?
 
 ## 💾 Data Used:
@@ -23,7 +22,7 @@ The data was sourced from Kaggle: https://www.kaggle.com/datasets/pahuljotsingh/
 
 ## 📊 Analysis
 
-### 1️⃣ How have home prices evolved over time, and how are they affected by mortgage and interest rates?
+### 1️⃣ How have home prices evolved over time and are they affected by interest and mortgage rates, inflation, and unemployment?
 
 
 ### 🔧 Excel Skills Used: Power Query (ETL), PivotTable & PivotChart & Timeline Visualization
