@@ -80,11 +80,9 @@ us_home_prices_dataset_2004_2024[Consumer_Sentiment])
 And similarly for the other metrics.
 
 I used conditional formatting for the font color. <br/>
-Positive correlations used a green color, negative used red, neutral used black.
+Strong positive correlations used a green color, strong negative used red, other used black.
 
-
-
-
+<img src="/Resources/Question%202%20Resources/Conditional%20Formatting.png" alt="Conditional Formatting" width="450" height="150"/>
 
 #### 📊 Analysis
 
