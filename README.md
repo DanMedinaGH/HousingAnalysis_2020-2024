@@ -7,9 +7,8 @@ As a Data Analyst for a residential REIT (Real Estate Investment Trust) company 
 In order to support analysis I asked the following questions: 
 1. How have home prices evolved over time and are they affected by interest and mortgage rates, inflation, and unemployment?
 2. What are the correlations of HPI to these metrics?
-3. Have major economic or political events like the 2008 crash and COVID-19—affected HPI and inflation?
-4. How has HPI changed since 2004?
-5. What actionable insights can we take from this analysis?
+3. Was HPI impacted by major economic or societal events and was correlation with inflation still present?
+4. What are the minimum and maximum HPI?
 
 ## 💾 Data Used:
 
@@ -56,8 +55,8 @@ I also added a Timeline so users can filter based on key periods.
 #### 📊 Analysis
 **HPI** = how much home prices have increased since 2000. An HPI of 200 means that home prices <br/> 
 increased 100%/doubled in price. <br/> <br/>
-After Looking at the chart we can see a consistent trend of home prices going up. Interests Rates have fluctuated up and down as well as mortgage rates. <br/><br/>
-However, during 2021 and 2023 we saw a signficant increase in interest and mortgage rates as well as home prices. <br/>
+After Looking at the chart we can see a consistent trend of home prices going up. However, interest rates have fluctuated up and down as well as mortgage rates. <br/><br/>
+During 2021 and 2023 we saw a signficant increase in HPI and interest and mortgage rates. <br/>
 
 <img src="/Resources/Question%201%20Resources/7.%20Q1%20Dashboard.png" alt="7. Q1 Dashboard" width="400" height="300"/>
 
@@ -79,7 +78,7 @@ However, during 2020-2021 (COVID) both HPI and unemployment increased. This can 
 ### 2️⃣  What are the correlations of HPI to these metrics?
 ### 🔧 Excel Skills Used: Functions & Conditional Formatting
 
-I used functions to calculate the correlation between Interest Rate, Mortgage Rate, Unemployment Rate, and Inflation (CPI) to Home Price Index.
+I used functions to calculate the correlation between Interest Rate, Mortgage Rate, Unemployment Rate, and Inflation (CPI) to Home Price Index. I used these to create a correlations table.
 
 To calculate the correlations I used 
 ```
@@ -95,14 +94,67 @@ Stronger correlations used a blue color and weaker used white.
 <img src="/Resources/Question 2 Resources/Color Scale.png" alt="Color Scale" width="450" height="150"/>
 
 #### 📊 Analysis
-I created a formatted correlations table and it showed a strong positive correlation between HPI and Inflation (CPI). <br/>
+The correlations table showed a strong positive correlation between HPI and Inflation (CPI). <br/>
 There is also a weak negative correlation between HPI and unemployment.
 
 <img src="/Resources/Question 2 Resources/Correlations Formatted.png" alt="Correlations Formatted" width="450" height="250"/>
 
 #### Conclusion
-This support assumption that inflation may be a strong reason house prices are increasing. <br/>
-This also supports assumption that Housing Prices may increase when there are more people working. <br/>
-This can be due to there being more money in the market to buy a home <br/>
+This supports the assumption that inflation may be a strong reason HPI increases. <br/>
+This also supports the assumption that HPI increases when unemployment is down. <br/>
+This can be due to there being more money in the market to buy a home and the value of the dollar going down.<br/>
+
+### 3️⃣ Was HPI impacted by major economic or societal events?
+### 🔧 Excel Skills Used: Clustered column timeline, Excel Functions
+
+I used the below array to create the clustered column timeline:
+
+To create the data label value I used the below function for each event:
+```
+=A3&CHAR(10)&CONCAT("AVG HPI: ", TEXT(D3, "0"))
+&CHAR(10)&CONCAT("AVG Inflation: ",
+TEXT(E3, "0"))&CHAR(10)&TEXT(B3, "yyy")
+```
+
+CHAR(10) is the newline character in Excel.
+
+<img src="/Resources/Question 2 Resources/Color Scale.png" alt="Color Scale" width="450" height="150"/>
+
+#### 📊 Analysis
+After the Great Recession (2008) HPI hit a low in 2012 and then started rising again shortly after. After the COVID pandemic (2020) HPI hit a high in 2024.
+
+<img src="/Resources/Question 2 Resources/Correlations Formatted.png" alt="Correlations Formatted" width="450" height="250"/>
+
+#### Conclusion
+We can conclude that major economic or societal events can affect HPI and their affects last for years. 
+Since the great recession hit a low after 4 years, we can expect the 2020 post pandemic HPI rise to hit a peak soon.
 
 
+### 4️⃣ What are the minimum and maximum HPI?
+### 🔧 Excel Skills Used: Excel Functions
+
+I used below functions to calculate MIN and MAX HPI:
+```
+= MIN(us_home_prices_dataset_2004_2024[Home_Price_Index])
+```
+
+```
+= MAX(us_home_prices_dataset_2004_2024[Home_Price_Index])
+```
+
+<img src="/Resources/Question 2 Resources/Color Scale.png" alt="Color Scale" width="450" height="150"/>
+
+#### 📊 Analysis
+The minimum and maximum HPI occurred a few years after the Great Recession and the COVID-19 pandemic.
+However, 5 years after the Great Recession HPI began to increase.
+
+<img src="/Resources/Question 2 Resources/Correlations Formatted.png" alt="Correlations Formatted" width="450" height="250"/>
+
+#### Conclusion
+If the current trend follows the inverse of what happened after the Great Recession we can expect HPI to decrease soon.
+This would mean it is currently not a good idea to invest in residential real estate, but may be soon.
+
+## Final Conclusion
+From my findings I found HPI is mostly affected by inflation and that major event may cause it to increase and decrease. Additionally, high unemployment can cause it to decrease as well. 
+
+Based off these findings I would advice my boss that it may be good idea to start planning on buying exisiting residential real estate in the near future. However building new real estate may not be a good idea. However, more historical data would be needed to support this since this is the only consistent period of HPI increase since 2004.
