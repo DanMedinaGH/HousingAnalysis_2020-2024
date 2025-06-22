@@ -50,7 +50,7 @@ Then I loaded the data into Excel.
 #### 🧲 PivotTable, PivotChart, & Timeline Visualizations & Conditional Formatting
 
 ##### 📈 PivotTable and Pivot Chart & Conditional Formatting
-After loading my data I created a PivotTable and PivotChart with data comparing the the Case-Shiller Home Price Index with interest rates and mortgage rates. 
+After loading my data I created a PivotTable and PivotChart with data comparing the the Case-Shiller Home Price Index with interest rates and mortgage rates as well as inflation (CPI) and unemployment rate. 
 I also added a Timeline so users can filter based on key periods.
 
 #### 📊 Analysis
@@ -61,18 +61,25 @@ However, during 2021 and 2023 we saw a signficant increase in interest and mortg
 
 <img src="/Resources/Question%201%20Resources/7.%20Q1%20Dashboard.png" alt="7. Q1 Dashboard" width="400" height="300"/>
 
-#### Conclusion
-This can mean that HPI increases may be due to causes other than interest and mortgage rates as HPI consistenly increase regardless.<br/>
-However, they may increase more when interest rates increase more dramatically . <br/>
+Inflation (CPI) - is the Consumer Price Index or the price change for a basket of goods compared to a base year (i.e. 1982-1984). 100 is base (1984). 200 means prices doubled since 1984.
 
-### 2️⃣  Which economic indicators appear most strongly connected to home price changes?
+HPI and inflation have both consistently increased.
+
+HPI appears to increase when unemployment decreases. However, during the 2020-2021 period, unemployment and HPI both increased significantly.
+
+#### Conclusion
+This means interest and mortgage rates are not good indicators of increasing HPI. However, when there is a dramatic spike in interest rates like during 2020-2021, this may indicate HPI may increase.
+
+Since, HPI and inflation increases consistently, this can mean home prices may not be increasing in innate value, but it is more related to the purchasing power of the dollar.
+
+Lastly, since HPI and unemployment have inverse decreasing/increasing behavior, this may mean that when there are more people working, then home prices increase due to more demand. Also, when there are less people working, HPI decreases because there is less demand.
+
+However, during 2020-2021 (COVID) both HPI and unemployment increased. This can mean that there was still a large demand for housing by a portion of the population. This may mean COVID affected people disproportionately.   
+
+### 2️⃣  What are the correlations of HPI to these metrics?
 ### 🔧 Excel Skills Used: Functions & Conditional Formatting
 
-I used functions to calculate the correlation between Interest Rate, Mortgage Rate, Unemployment Rate, Inflation (CPI), Consumer Sentiment Index and Home Price Index.
-
-Consumer Sentiment Index - is the outlook of consumers on the economy and their financial situation. 100 being neutral, > 100 optimisitic, < 100 pessimistic.
-
-Inflation (CPI) - is the Consumer Price Index or the price change for a basket of goods compared to a base year (i.e. 1982-1984). 100 is base (1984). 200 means prices doubled since 1984.
+I used functions to calculate the correlation between Interest Rate, Mortgage Rate, Unemployment Rate, and Inflation (CPI) to Home Price Index.
 
 To calculate the correlations I used 
 ```
@@ -83,7 +90,7 @@ us_home_prices_dataset_2004_2024[Consumer_Sentiment])
 And similarly for the other metrics.
 
 I used color scale conditional formatting for the background color. <br/>
-Strong positive correlations used a green color, strong negative used red, neutral used white.
+Stronger correlations used a blue color and weaker used white.
 
 <img src="/Resources/Question 2 Resources/Color Scale.png" alt="Color Scale" width="450" height="150"/>
 
@@ -94,6 +101,8 @@ There is also a weak negative correlation between HPI and unemployment.
 <img src="/Resources/Question 2 Resources/Correlations Formatted.png" alt="Correlations Formatted" width="450" height="250"/>
 
 #### Conclusion
-It seems that inflation may be a strong reason housing prices are increasing. <br/>
-We may also assume that Housing Prices may increase when there are more people working. <br/>
-This may be due to there being more money in the market to buy a home <br/>
+This support assumption that inflation may be a strong reason house prices are increasing. <br/>
+This also supports assumption that Housing Prices may increase when there are more people working. <br/>
+This can be due to there being more money in the market to buy a home <br/>
+
+
